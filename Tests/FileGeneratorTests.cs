@@ -1,3 +1,4 @@
+
 using System.Text.RegularExpressions;
 using Xunit;
 
@@ -9,7 +10,7 @@ namespace Tests
         public void FileGenerator_GeneratesFileWithCorrectLineCount()
         {
             // Arrange
-            string[] args = { "output.txt", "100" };
+            string[] args = { $"output_{Guid.NewGuid()}.txt", "100" };
 
             // Act
             TextFileGenerator.Program.FileGenerator(args, out var outputFile);
@@ -23,7 +24,7 @@ namespace Tests
         public void FileGenerator_GeneratesFileWithCorrectLineFormat()
         {
             // Arrange
-            string[] args = { "output.txt", "1" };
+            string[] args = { $"output_{Guid.NewGuid()}.txt", "1" };
 
             // Act
             TextFileGenerator.Program.FileGenerator(args, out var outputFile);
@@ -40,7 +41,7 @@ namespace Tests
         public void FileGenerator_GeneratesFileWithUniqueLines()
         {
             // Arrange
-            string[] args = new[] { "output.txt", "100" };
+            string[] args = new[] { $"output_{Guid.NewGuid()}.txt", "100" };
 
             // Act
             TextFileGenerator.Program.FileGenerator(args, out var outputFile);

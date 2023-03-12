@@ -26,10 +26,6 @@ To run the sorter program, you can execute the following command in the console:
 
 Where `TextFileSorter.exe` is the name of the compiled executable, `input.txt` is the path to the input file, and `output.txt` is the path to the output file. Note that for large files, the sorter program may take a significant amount of time and memory to complete.
 
-Note:
-Use a stream reader and writer instead of reading the entire input file into memory and writing the entire output file at once. This would allow the sorting to be done "on the fly" as each line is read in, and the output to be written as each line is sorted.
-Use a custom comparer instead of a lambda expression for the OrderBy method. This would allow you to more efficiently compare the string and number parts of each line during the sorting process.
-
 Please note: A good solution to sort using a low amount of memory is described here:
 https://josef.codes/sorting-really-large-files-with-c-sharp/
 
